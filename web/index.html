@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1220" />
+    <title>Vitals</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <div class="title">Vitals</div>
+          <div class="subtitle" id="status">Loading…</div>
+        </div>
+        <div class="row gap">
+          <a class="ghost" href="/charts">Charts</a>
+          <button class="ghost" id="refreshBtn" type="button">Refresh</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="card">
+          <div class="cardTitle">Daily weight</div>
+          <div class="row gap">
+            <input class="input" id="weightValue" inputmode="decimal" placeholder="e.g. 75.4" />
+            <div class="segmented" role="group" aria-label="Weight units">
+              <button class="seg" id="unitLb" type="button">lb</button>
+              <button class="seg" id="unitKg" type="button">kg</button>
+            </div>
+          </div>
+          <div class="row between">
+            <div class="muted" id="weightMeta">—</div>
+            <div class="row gap">
+              <button class="ghost" id="undoWeightBtn" type="button">Undo last</button>
+              <button class="primary" id="saveWeightBtn" type="button">Save</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="cardTitle">Water</div>
+          <div class="row between">
+            <div>
+              <div class="big" id="waterTotal">0.0 L</div>
+              <div class="muted" id="waterMeta">Today</div>
+            </div>
+            <button class="primary bigBtn" id="addWaterBtn" type="button">+ 1.0 L</button>
+          </div>
+
+          <div class="row gap wrap" style="margin-top: 12px;">
+            <button class="chip" data-delta="0.25" type="button">+0.25</button>
+            <button class="chip" data-delta="0.5" type="button">+0.5</button>
+            <button class="chip" data-delta="1" type="button">+1.0</button>
+            <span class="spacer"></span>
+            <button class="danger" id="undoWaterBtn" type="button">Undo last</button>
+            <button class="ghost" id="decWaterBtn" type="button">- 0.25</button>
+          </div>
+
+          <div class="divider"></div>
+          <div class="listTitle">Recent entries</div>
+          <div class="list" id="waterList"></div>
+        </section>
+
+        <section class="card">
+          <div class="cardTitle">Recent weights</div>
+          <div class="list" id="weightList"></div>
+        </section>
+      </main>
+
+      <footer class="footer muted">Stored locally in SQLite on the server.</footer>
+    </div>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

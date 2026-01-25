@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1220" />
+    <title>Vitals • Charts</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <div class="title">Charts</div>
+          <div class="subtitle" id="status">Loading…</div>
+        </div>
+        <div class="row gap">
+          <a class="ghost" href="/">Home</a>
+          <button class="ghost" id="refreshBtn" type="button">Refresh</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="card">
+          <div class="cardTitle">Water (daily total)</div>
+          <canvas id="waterChart" width="640" height="240" style="width: 100%; height: 240px;"></canvas>
+          <div class="muted" id="waterNote">—</div>
+        </section>
+
+        <section class="card">
+          <div class="cardTitle">Weight (latest per day)</div>
+          <canvas id="weightChart" width="640" height="240" style="width: 100%; height: 240px;"></canvas>
+          <div class="muted" id="weightNote">—</div>
+        </section>
+
+        <section class="card">
+          <div class="cardTitle">Range</div>
+          <div class="row gap wrap">
+            <button class="chip" data-days="14" type="button">14d</button>
+            <button class="chip" data-days="30" type="button">30d</button>
+            <button class="chip" data-days="60" type="button">60d</button>
+            <button class="chip" data-days="90" type="button">90d</button>
+            <span class="spacer"></span>
+            <div class="segmented" role="group" aria-label="Weight units">
+              <button class="seg" id="unitLb" type="button">lb</button>
+              <button class="seg" id="unitKg" type="button">kg</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer muted">Daily totals and latest daily weight.</footer>
+    </div>
+
+    <script src="/charts.js" type="module"></script>
+  </body>
+</html>
