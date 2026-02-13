@@ -14,7 +14,7 @@ func TestLoggingMiddleware(t *testing.T) {
 	// Create a dummy handler
 	nextHandler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusTeapot)
-		w.Write([]byte("OK"))
+		_, _ = w.Write([]byte("OK"))
 	})
 
 	// Wrap it
