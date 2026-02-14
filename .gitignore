@@ -1,8 +1,3 @@
-biometrics.sqlite
-*.sqlite
-*.sqlite3
-*.sqlite-*
-
 .venv/
 
 .DS_Store

@@ -27,13 +27,16 @@ go build ./...
 # Test
 go test ./...
 
-# Run locally
-DATABASE_URL="postgres://user:pass@localhost:5432/biometrics?sslmode=disable" \
+# Run locally (In-Memory)
+go run ./cmd/biometrics
+
+# Run locally (PostgreSQL)
+POSTGRES_URL="postgres://user:pass@localhost:5432/biometrics?sslmode=disable" \
   go run ./cmd/biometrics
 
 # Docker
 docker build -t biometrics .
-docker run -e DATABASE_URL="..." -p 8080:8080 biometrics
+docker run -e POSTGRES_URL="..." -p 8080:8080 biometrics
 ```
 
 Then open http://localhost:8080
@@ -42,7 +45,9 @@ Then open http://localhost:8080
 
 | Variable | Default | Description |
 |---|---|---|
-| `DATABASE_URL` | *(required)* | PostgreSQL connection string |
+| `POSTGRES_URL` | *(optional)* | PostgreSQL connection string. If unset, uses in-memory DB. |
+| `POSTGRES_USER` | *(optional)* | Override user for Postgres connection (maps to PGUSER). |
+| `POSTGRES_PASSWORD` | *(optional)* | Override password for Postgres connection (maps to PGPASSWORD). |
 | `ADDR` | `:8080` | Listen address |
 | `WEB_DIR` | `web` | Path to static frontend assets |
 

@@ -56,5 +56,5 @@ func (s *Server) Handler() http.Handler {
 	root.Handle("/api/", http.StripPrefix("/api", api))
 	root.Handle("/", spaFromDisk(s.webDir))
 
-	return withNoCache(root)
+	return s.loggingMiddleware(withNoCache(root))
 }
