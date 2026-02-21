@@ -42,7 +42,7 @@ func NewAuthService(users domain.UserRepository, sessions domain.SessionReposito
 // Login authenticates a user and creates a session.
 func (s *AuthService) Login(ctx context.Context, username, password, userAgent, ip string) (string, error) {
 	user, err := s.users.GetByUsername(ctx, username)
-	if err != nil {
+	if err != nil || user == nil {
 		return "", ErrInvalidCredentials
 	}
 
@@ -71,7 +71,7 @@ func (s *AuthService) Logout(ctx context.Context, token string) error {
 // ValidateSession checks if a session token is valid and matches the user agent.
 func (s *AuthService) ValidateSession(ctx context.Context, token, userAgent string) (*domain.User, error) {
 	session, err := s.sessions.GetByToken(ctx, token)
-	if err != nil {
+	if err != nil || session == nil {
 		return nil, ErrSessionNotFound
 	}
 
