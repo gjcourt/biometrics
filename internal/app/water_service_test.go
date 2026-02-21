@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"biometrics/internal/app"
-	"biometrics/internal/domain"
+	"vitals/internal/app"
+	"vitals/internal/domain"
 )
 
 type mockWaterRepo struct {

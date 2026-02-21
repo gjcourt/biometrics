@@ -6,7 +6,7 @@ import (
 	"database/sql"
 	"time"
 
-	"biometrics/internal/domain"
+	"vitals/internal/domain"
 )
 
 // GetByUsername retrieves a user by username.

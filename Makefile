@@ -1,6 +1,6 @@
-# Makefile for biometrics
+# Makefile for vitals
 
-APP_NAME := biometrics
+APP_NAME := vitals
 CMD_PATH := ./cmd/$(APP_NAME)
 BUILD_DIR := .
 

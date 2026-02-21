@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	adapthttp "biometrics/internal/adapter/http"
-	"biometrics/internal/app"
-	"biometrics/internal/domain"
+	adapthttp "vitals/internal/adapter/http"
+	"vitals/internal/app"
+	"vitals/internal/domain"
 )
 
 // ---------------------------------------------------------------------------

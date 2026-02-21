@@ -4,7 +4,7 @@ import (
 	"math"
 	"testing"
 
-	"biometrics/internal/domain"
+	"vitals/internal/domain"
 )
 
 func almostEqual(a, b, epsilon float64) bool {

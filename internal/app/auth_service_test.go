@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"biometrics/internal/domain"
+	"vitals/internal/domain"
 
 	"golang.org/x/crypto/bcrypt"
 )

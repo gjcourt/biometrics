@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"biometrics/internal/domain"
+	"vitals/internal/domain"
 )
 
 // ChartsService encapsulates chart data retrieval use cases.

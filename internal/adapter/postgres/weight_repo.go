@@ -6,7 +6,7 @@ import (
 	"errors"
 	"time"
 
-	"biometrics/internal/domain"
+	"vitals/internal/domain"
 )
 
 // AddWeightEvent inserts a new weight event.

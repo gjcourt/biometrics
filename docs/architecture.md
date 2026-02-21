@@ -1,0 +1,22 @@
+# Vitals Architecture
+
+Vitals follows the Hexagonal Architecture (Ports and Adapters) design pattern. This architecture ensures that the core business logic is isolated from external concerns such as databases, web frameworks, and third-party services.
+
+## Layers
+
+### Domain Layer (`internal/domain`)
+The innermost layer containing the core business entities and rules. It has no dependencies on any other layer or external libraries.
+- **Entities**: `User`, `WeightRecord`, `WaterRecord`.
+- **Ports**: Interfaces defining how the domain interacts with the outside world (e.g., `UserRepository`, `WeightRepository`).
+
+### Application Layer (`internal/app`)
+Contains the application services that orchestrate the business use cases. It depends only on the domain layer.
+- **Services**: `AuthService`, `WeightService`, `WaterService`, `ChartsService`.
+
+### Adapter Layer (`internal/adapter`)
+The outermost layer that implements the ports defined in the domain layer. It interacts with external systems.
+- **Driving Adapters**: HTTP handlers (`internal/adapter/http`) that receive requests and call application services.
+- **Driven Adapters**: Database repositories (`internal/adapter/postgres`, `internal/adapter/memory`) that implement the repository interfaces to store and retrieve data.
+
+## Dependency Rule
+Dependencies always point inwards. The adapter layer depends on the application and domain layers, but the domain layer depends on nothing.

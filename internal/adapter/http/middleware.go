@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
-	"biometrics/internal/app"
-	"biometrics/internal/domain"
+	"vitals/internal/app"
+	"vitals/internal/domain"
 )
 
 type contextKey string

@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"biometrics/internal/domain"
+	"vitals/internal/domain"
 )
 
 // AddWaterEvent inserts a new water intake event.

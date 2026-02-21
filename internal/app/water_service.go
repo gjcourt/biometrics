@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"biometrics/internal/domain"
+	"vitals/internal/domain"
 )
 
 // WaterService encapsulates water-tracking use cases.

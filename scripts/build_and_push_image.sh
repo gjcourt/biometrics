@@ -4,7 +4,7 @@ set -e
 # specific registry and image name
 REGISTRY="ghcr.io"
 USER="gjcourt"
-PROJECT="biometrics"
+PROJECT="vitals"
 DATE=$(date +%Y-%m-%d)
 TAG="$DATE"
 

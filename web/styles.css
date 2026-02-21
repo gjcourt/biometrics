@@ -13,46 +13,46 @@
   --button-bg: rgba(255,255,255,.04);
 }
 [data-theme="nature"]{
-  --bg:#1a1c18;
-  --card:#242920;
+  --bg:#0d100c;
+  --card:#141812;
   --text:#e2e3dd;
   --muted:#8f9288;
   --primary:#9cd67d;
   --primary2:#7ab85a;
   --danger:#ff8ba7;
-  --border:rgba(255,255,255,.1);
+  --border:rgba(255,255,255,.08);
   --shadow: 0 10px 30px rgba(0,0,0,.35);
   --radius:16px;
   --input-bg: rgba(0,0,0,.22);
-  --button-bg: rgba(255,255,255,.06);
+  --button-bg: rgba(255,255,255,.04);
 }
 [data-theme="plum"]{
-  --bg:#18101a;
-  --card:#251829;
+  --bg:#120a14;
+  --card:#1a0f1d;
   --text:#f5e6f7;
   --muted:#bfa3c4;
   --primary:#d68ae0;
   --primary2:#b55cc2;
   --danger:#ff5a6b;
-  --border:rgba(255,255,255,.1);
+  --border:rgba(255,255,255,.08);
   --shadow: 0 10px 30px rgba(0,0,0,.35);
   --radius:16px;
   --input-bg: rgba(0,0,0,.22);
-  --button-bg: rgba(255,255,255,.06);
+  --button-bg: rgba(255,255,255,.04);
 }
 [data-theme="ocean"]{
-  --bg:#001e26;
-  --card:#002933;
+  --bg:#001117;
+  --card:#001a24;
   --text:#e0f7fa;
   --muted:#80deea;
   --primary:#00bcd4;
   --primary2:#0097a7;
   --danger:#ff5252;
-  --border:rgba(255,255,255,.1);
+  --border:rgba(255,255,255,.08);
   --shadow: 0 10px 30px rgba(0,0,0,.35);
   --radius:16px;
   --input-bg: rgba(0,0,0,.22);
-  --button-bg: rgba(255,255,255,.06);
+  --button-bg: rgba(255,255,255,.04);
 }
 [data-theme="light"]{
   --bg:#f8f9fa;
@@ -117,4 +117,26 @@ select{background:var(--button-bg); color:var(--text); border:1px solid var(--bo
 @media (max-width:420px){
   .big{font-size:28px}
   .bigBtn{width:100%}
+}
+
+.theme-switch {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--card);
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    align-items: center;
+}
+.theme-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.2s;
+    border: 1px solid var(--border);
+}
+.theme-btn:hover {
+    transform: scale(1.2);
 }
