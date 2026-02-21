@@ -26,6 +26,20 @@
   --input-bg: rgba(0,0,0,.22);
   --button-bg: rgba(255,255,255,.06);
 }
+[data-theme="plum"]{
+  --bg:#18101a;
+  --card:#251829;
+  --text:#f5e6f7;
+  --muted:#bfa3c4;
+  --primary:#d68ae0;
+  --primary2:#b55cc2;
+  --danger:#ff5a6b;
+  --border:rgba(255,255,255,.1);
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius:16px;
+  --input-bg: rgba(0,0,0,.22);
+  --button-bg: rgba(255,255,255,.06);
+}
 [data-theme="ocean"]{
   --bg:#001e26;
   --card:#002933;
@@ -77,8 +91,8 @@ body{
 .spacer{flex:1}
 .input{flex:1; min-width:120px; padding:12px 12px; font-size:16px; border-radius:12px; border:1px solid var(--border); background:var(--input-bg); color:var(--text); outline:none}
 .input:focus{border-color:var(--primary)}
-button{border:1px solid var(--border); border-radius:12px; padding:10px 12px; background:var(--button-bg); color:var(--text); font-weight:650; font-size:14px; cursor: pointer;}
-button:active{transform:translateY(1px)}
+button, .button{border:1px solid var(--border); border-radius:12px; padding:10px 12px; background:var(--button-bg); color:var(--text); font-weight:650; font-size:14px; cursor: pointer;}
+button:active, .button:active{transform:translateY(1px)}
 .primary{background:linear-gradient(180deg, var(--primary), var(--primary2)); border-color:var(--primary2); color: #fff;}
 .ghost{background:transparent; border-color:transparent;}
 .danger{background:rgba(255,90,107,.12); border-color:var(--danger); color:var(--danger)}

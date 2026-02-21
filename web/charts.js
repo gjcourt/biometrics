@@ -45,7 +45,7 @@ document.querySelectorAll('button[data-days]').forEach((btn) => {
 });
 
 logoutBtn.addEventListener('click', async () => {
-  await fetch('/logout', { method: 'POST' });
+  await fetch('/api/auth/logout', { method: 'POST' });
   location.reload();
 });
 
