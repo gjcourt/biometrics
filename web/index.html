@@ -78,13 +78,13 @@
 
       <footer class="footer muted">
         <span>Stored securely on the server.</span>
-        <select id="themeSelect" aria-label="Theme">
-          <option value="dark">Dark</option>
-          <option value="plum">Plum</option>
-          <option value="nature">Nature</option>
-          <option value="ocean">Ocean</option>
-          <option value="light">Light</option>
-        </select>
+        <div class="theme-switch">
+          <div class="theme-btn" style="background: #0b1220" onclick="setTheme('dark')" title="Dark"></div>
+          <div class="theme-btn" style="background: #120a14" onclick="setTheme('plum')" title="Plum"></div>
+          <div class="theme-btn" style="background: #0d100c" onclick="setTheme('nature')" title="Nature"></div>
+          <div class="theme-btn" style="background: #001117" onclick="setTheme('ocean')" title="Ocean"></div>
+          <div class="theme-btn" style="background: #f8f9fa" onclick="setTheme('light')" title="Light"></div>
+        </div>
       </footer>
     </div>
 

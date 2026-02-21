@@ -1,4 +1,4 @@
-module biometrics
+module vitals
 
 go 1.25.5
 

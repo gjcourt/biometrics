@@ -1,9 +1,9 @@
-# Biometrics — Copilot Instructions
+# Vitals — Copilot Instructions
 
 ## Project Overview
 
 Go web application for tracking daily weight and water intake. PostgreSQL
-backend, vanilla JS frontend. Module path: `biometrics`.
+backend, vanilla JS frontend. Module path: `vitals`.
 
 ## Language & Tooling Rules
 
@@ -20,7 +20,7 @@ The codebase follows hexagonal architecture. Respect the dependency rule:
 **dependencies always point inward**.
 
 ```
-cmd/biometrics/          ← entry point, wires everything together
+cmd/vitals/          ← entry point, wires everything together
 internal/
   domain/                ← core: entities + port interfaces (ZERO external deps)
   app/                   ← application services (depend ONLY on domain ports)
@@ -38,7 +38,7 @@ web/                     ← static frontend assets (HTML/CSS/JS)
 | `app` | `domain` | `adapter`, any DB/HTTP library |
 | `adapter/postgres` | `domain`, `database/sql`, `github.com/lib/pq` | `app`, `adapter/http` |
 | `adapter/http` | `domain`, `app`, `net/http` | `adapter/postgres` |
-| `cmd/biometrics` | everything (wiring) | — |
+| `cmd/vitals` | everything (wiring) | — |
 
 ### Key conventions
 
@@ -169,12 +169,12 @@ go build ./...
 go test ./...
 
 # Run locally
-DATABASE_URL="postgres://user:pass@localhost:5432/biometrics?sslmode=disable" \
-  go run ./cmd/biometrics
+DATABASE_URL="postgres://user:pass@localhost:5432/vitals?sslmode=disable" \
+  go run ./cmd/vitals
 
 # Docker
-docker build -t biometrics .
-docker run -e DATABASE_URL="..." -p 8080:8080 biometrics
+docker build -t vitals .
+docker run -e DATABASE_URL="..." -p 8080:8080 vitals
 ```
 
 ## Environment Variables

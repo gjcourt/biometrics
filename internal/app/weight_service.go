@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"biometrics/internal/domain"
+	"vitals/internal/domain"
 )
 
 // WeightService encapsulates weight-tracking use cases.

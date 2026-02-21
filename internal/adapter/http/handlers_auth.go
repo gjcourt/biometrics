@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"biometrics/internal/app"
+	"vitals/internal/app"
 
 	"github.com/coreos/go-oidc/v3/oidc"
 )

@@ -1,0 +1,21 @@
+# Vitals API Documentation
+
+The Vitals API provides endpoints for managing health metrics such as weight and water intake.
+
+## Endpoints
+
+### Authentication
+- `POST /api/auth/signup`: Register a new user.
+- `POST /api/auth/login`: Authenticate a user and receive a token.
+
+### Weight
+- `GET /api/weight`: Retrieve weight records.
+- `POST /api/weight`: Add a new weight record.
+
+### Water
+- `GET /api/water`: Retrieve water intake records.
+- `POST /api/water`: Add a new water intake record.
+
+### Charts
+- `GET /api/charts/weight`: Retrieve data for weight charts.
+- `GET /api/charts/water`: Retrieve data for water charts.

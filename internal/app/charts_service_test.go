@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"biometrics/internal/app"
-	"biometrics/internal/domain"
+	"vitals/internal/app"
+	"vitals/internal/domain"
 )
 
 func TestGetDaily_BadUnit(t *testing.T) {

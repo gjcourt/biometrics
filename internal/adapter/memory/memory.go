@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"biometrics/internal/domain"
+	"vitals/internal/domain"
 )
 
 // DB implements an in-memory database storage.

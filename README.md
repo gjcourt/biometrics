@@ -1,14 +1,22 @@
-# Biometrics
+# Vitals
 
 A simple, mobile-friendly web app for tracking daily weight and water intake.
 Built with Go, PostgreSQL, and vanilla JS.
+
+## Documentation
+
+For detailed documentation, please refer to the [docs/](./docs/) folder:
+- [API Documentation](./docs/api.md)
+- [Authentication](./docs/authentication.md)
+- [Database Schema](./docs/database.md)
+- [Architecture](./docs/architecture.md)
 
 ## Architecture
 
 The project follows **hexagonal (ports & adapters) architecture**:
 
 ```
-cmd/biometrics/          ← entry point, wires everything together
+cmd/vitals/          ← entry point, wires everything together
 internal/
   domain/                ← core: entities + port interfaces (zero external deps)
   app/                   ← application services (business logic + validation)
@@ -28,15 +36,15 @@ go build ./...
 go test ./...
 
 # Run locally (In-Memory)
-go run ./cmd/biometrics
+go run ./cmd/vitals
 
 # Run locally (PostgreSQL)
-POSTGRES_URL="postgres://user:pass@localhost:5432/biometrics?sslmode=disable" \
-  go run ./cmd/biometrics
+POSTGRES_URL="postgres://user:pass@localhost:5432/vitals?sslmode=disable" \
+  go run ./cmd/vitals
 
 # Docker
-docker build -t biometrics .
-docker run -e POSTGRES_URL="..." -p 8080:8080 biometrics
+docker build -t vitals .
+docker run -e POSTGRES_URL="..." -p 8080:8080 vitals
 ```
 
 Then open http://localhost:8080
